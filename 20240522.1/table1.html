@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        tr:table row의 줄임말, 줄을 표현하는 태그이다
+        td:table date의 줄임말, 칸을 표현하는 태그이다
+        택스트나 이미지들을 넣을 수 있다
+        <table border="1">:border는 테이블의 테두리 선 굵기 설정이다
+            단위는 px(픽셀) 테이블 태그에만 테두리선이 적용되는게 아니고,
+            td에도 테두리가 적용된다.
+            
+            
+
+
+    -->
+    <!--
+        약어로 태그 생성방법
+        태그명>하위 태그명>하위 태그명
+        table>tr>td -> 1줄 1칸 테이블 생성
+        table>tr>td*4 -> 1줄 4칸 테이블 생선
+        table>tr*10>td*2 -> 10줄 2칸 테이블 생성
+        컨트롤+스페이스바+엔터
+
+        p#para -> p태그를 생성하면서 p태그에 id="para"를 부여 -> <p id="para"></p>
+        #은 아이디 , . 은 클래스
+        div.box -> <div class="box"></div>
+        위든 아래든 칸을 합치려면 하나를 냅두고 나머지 지우고 합치는 칸의 개수
+        가로라면 colspan=n 세로라면 rowspan=n
+    -->
+    
+    
+    <table border="1">
+        <tr height="50">
+            <td width="100" colspan="2">1</td>
+         
+            <td width="50" rowspan="2">3</td>
+        </tr>
+        <tr height="150">
+            <td width="100">4</td>
+            <td width="200">5</td>
+            
+        </tr>
+    </table>
+
+<table border="1" cellspacing="0">
+    <tr height="50">
+        <td width="100" colspan="4">1</td>
+       
+        <td>5</td>
+    </tr>
+    <tr height="50">
+        <td width="100">1</td>
+        <td width="100" colspan="4">2</td>
+
+    </tr>
+    <tr height="50">
+        <td>1</td>
+        <td colspan="3">2</td>
+
+        <td width="100" rowspan="4">5</td>
+    </tr>
+    <tr height="50">
+        <td>1</td>
+        <td width="100">2</td>
+        <td colspan="2" width="100">3</td>
+        
+        
+    </tr>
+    <tr height="50">
+        <td>1</td>
+        <td colspan="3">2</td>
+
+        
+    </tr>
+    <tr>
+        <td height="50">1</td>
+        <td >2</td>
+        <td widht="100">3</td>
+        <td widht="100">4</td>
+        
+    </tr>
+</table>
+
+
+<br>
+<hr>
+<br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th></th>
+            <th width="100">번호</th>
+            <th width="100">점수</th>  <!-- th는 글자 굵기 정열-->
+            <th width="100">이름</th>
+            
+        </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <th style="background-color:brown">바보</th>
+                <td>1</td>
+                <td>87</td>
+                <td>정한종</td> 
+            </tr>
+            <tr>
+                <th>멍청이</th>
+                <td>1</td>
+                <td>87</td>
+                <td>정한종</td> 
+            </tr>
+            <tr>
+                <th>천재</th>
+                <td>1</td>
+                <td>87</td>
+                <td>정한종</td> 
+            </tr>
+        </tbody>
+</table>
+    
+    
+
+    
+
+</body>
+</html>
