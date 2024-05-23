@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table2연습</title>
+
+    <!-- <style type="text/css">
+            th{
+            font-size:40px;}
+
+            #title_school{
+                font-size:15px;
+
+            }
+            .title{
+                font-size: 20px;
+            }
+
+        
+    </style> 보통 꾸밀 때 스타일 위주로 꾸미기-->
+    
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+    
+    td,th{
+        border-width:1px;
+        border-color:black;
+        border-style:solid;
+        text-align:center;
+}
+     table{border-collapse:collapse; /*테이블 셀 간의 간격 제거 */
+        width:380px;
+    }
+    .w100{width:100px;}
+    .w80{width:80px;}
+    tr{ height:40px;}
+
+    .bg_yellow{
+        background: yellow;
+    }
+    .bg_greenyellow{
+        background: greenyellow;
+    }
+    tr:hover{                                
+        background-color: #ccc;   /*뒷배경색*/       
+        font-size:20px;            /*글자크기*/
+        color:blue;             /*글자색*/
+        font-weight:100px;        /*글자굵기*/
+        font-family:cursive       /*글씨체   구글글꼴*/
+        
+        font-family:"Nanum Gothic", sans-serif;
+        font-weight:400;
+        font-style:normal;
+    }
+        
+</style>
+</head>
+
+<!--css나 자바 스크립트는 <head>안에서만 쓸 수 있고 그걸 쓰기위한
+    코드는 <style> 코드임 정확히 <style type="text/css">
+        css 선택 /*=css주석
+        1.태그 이름 ex=th{여기에 css코드}
+        2.id
+        3.class는 그룹
+        
+        id는 중복 안 됌 class는 중복 됌
+        
+        표기법
+        국어점수를 한다 치면
+        korScore:카멜표기법
+        kor_score:스네이크표기법
+        KorScore:파스칼표기법
+    -->
+
+        
+
+
+
+<body>
+    <table >
+
+        <thead>
+            <tr>
+                <th id="title_school" class="w100 bg_yellow" >학교명</th>
+                <th class="w100 bg_yellow">학과명</th>
+                <th class="w100 bg_greenyellow">이름</th>
+                <th class="w80 bg_greenyellow">성적</th>
+            </tr>
+        </thead>
+
+        <tboby>
+
+            <tr>
+                <td>a대학교</td>
+                <td>컴공과</td>
+                <td>이순신</td>
+                <td>4.3</td>
+            </tr>
+            <tr>
+                <td>b대학교</td>
+                <td>국문과</td>
+                <td>한석봉</td>
+                <td>3.9</td>
+            </tr>
+            <tr>
+                <td>c대학교</td>
+                <td>기계과</td>
+                <td>장영실</td>
+                <td>2.5</td>
+            </tr>
+        </tboby>
+        <tfoot>
+            <tr>
+                <th class="bg_yellow">학교명</th>
+                <th class="bg_yellow">학과명</th>
+                <th class="w80 bg_greenyellow">이름</th>
+                <th class="w80 bg_greenyellow">성적</th>
+            </tr>
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>
