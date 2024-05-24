@@ -1,0 +1,38 @@
+<!-- position1.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--*는 all 그래서 *{margin:0;}하면 모든 태그의 마진이 0이 됌
+    padding:0; 패딩도 마찬가지 box-sizing: border-box; 기본적으로 씀-->
+    <style>   
+        body{margin:0; padding:0;  box-sizing: border-box;} 
+        #box1{
+            width:300px; height:300px;
+            background-color:blue;
+
+        }
+        #box2{
+            width:300px; height:300px;
+            background-color:yellow;
+            
+            position:relative;  
+            bottom:150px;
+            left:150px;
+        }
+        
+    </style>
+    <!--position:absolute;는 좌표 지정해주는 코드
+    relative는 상대적 자기가 시작했던 부분부터 시작
+    absolute는 절대적 브라우저의 시작부분-->
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    
+
+    
+</body>
+</html>
