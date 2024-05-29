@@ -1,0 +1,46 @@
+/*papago.css*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#warp{
+    width:100%;
+    position:relative;
+    min-width:800px;
+}
+
+#header{
+    width:100%;
+    padding:20px;
+    position: relative;
+}
+#header_left{
+    position:relative;
+    width:100%;
+
+}
+#header_left .logo{
+    width:130px;
+}
+#header_left .logo img{
+    width:130px;
+}
+#header_left .menu{
+    position: absolute;
+    top:0;
+    left:150px;
+}
+#header_right{
+    position:absolute;
+    right:20px;
+}
+
+#main{
+    width:1400px;
+    margin:0 auto;
+    padding:50px 0;
+    position:relative;
+}
