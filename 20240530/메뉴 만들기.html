@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <style>
+        #container1{
+            display:flex;      
+            gap:20px;       /*gap는 텍스트 사이의 간격을 조절 */
+
+        }
+        .item1{
+            padding:0 10px;
+            cursor:pointer;
+        }
+        #container2{
+            display:flex;     /* display:flex를 써주면 텍스트 사이의 간격이 없고 한줄로 붙여줌  원래 있던 간격을 덮어씌운거임 */
+            width:500px;
+        }
+        .item2{
+            flex-grow:1;      /* flew-grow는 비율을 주는 태그 부모 태그의 너비에 맞춰 비율을 맞춤 */
+            text-align: center;
+        }
+        #container3{
+            display:flex;
+            padding:20px 0;
+            border-top:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+            width:800px;
+                            
+        }
+        #logo1>img{
+            width:50px;
+            display: block;
+        }
+        #container3>ul{
+            margin:0;
+            padding:0;
+            list-style-type:none;
+            flex-grow:1;
+            display:flex;
+            align-items: center;  /* align-items:center 쓰면 줄에서 가운데로 오게 함 */
+            justify-content: space-evenly;
+            
+
+
+        }
+    </style>
+    <h2>메뉴 만들기</h2>
+    <div id="container1">
+        <div class="item1">쇼핑</div>
+        <div class="item1">증권</div>
+        <div class="item1">뉴스</div>
+        <div class="item1">웹툰</div>
+        <div class="item1">스포츠</div>
+    </div>
+    <div id="container2">
+        <span class="item2">쇼핑</span>
+        <span class="item2">증권</span>
+        <span class="item2">뉴스</span>
+        <span class="item2">웹툰</span>
+        <span class="item2">스포츠</span>
+    </div>
+    <div id="container3">
+        <div id="logo1"><img src="https://loremflickr.com/200/200"></div>
+        <ul>
+            <li class="item3">게임</li>
+            <li class="item3">영화</li>
+            <li class="item3">웹툰</li>
+            <li class="item3">물놀이</li>
+            <li class="item3">바캉스</li>
+        </ul>
+    </div>
+
+    <style>
+        #header{
+            padding:0 20px;
+            display: flex;
+            border-top:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+            width:1000px;
+            position: relative;
+            
+            
+        }
+        .menu{
+            padding:20px 15px;
+            cursor: pointer;
+            font-weight: 900;
+            
+            
+            
+            
+        }
+        .menu:hover{
+            background: green;
+            color:white;
+        }
+        .오른쪽{
+            position:absolute;
+            left: 880px;
+            background: green;
+            color: white;
+            border-radius: 8px;
+            font-size: 13px;
+            padding: 10px 20px;
+            top:13px;
+            cursor: pointer;
+            border:0;
+            
+            
+            
+
+        }
+        
+
+    </style>
+        <h2>메뉴 만들기 실습</h2>
+        <div id="header">
+            <div class="menu">홈</div>
+            <div class="menu">웹툰</div>
+            <div class="menu">베스트도전</div>
+            <div class="menu">도전만화</div>
+            <div class="menu">마이페이지</div>
+            <button class="오른쪽" >CREATOR'S</button>
+        </div>
+    
+</body>
+</html>

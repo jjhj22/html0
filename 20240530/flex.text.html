@@ -1,0 +1,42 @@
+<!--flex_test2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont1{
+            width:100%;
+            max-width:1200px;
+            margin:0 auto;
+            flex-wrap:wrap;
+            justify-content:center;
+            display: flex;
+            /* gap:10px; */
+        }
+        #cont1>img{
+            width:25%;
+            padding-right:10px;
+            box-sizing: border-box;
+            /* width:calc( (1200px - 30px) /4); */
+        }
+    </style>
+</head>
+<body>
+    <h2>여러줄 배치하기</h2>
+    <div id="cont1">
+        <img src="http://loremflickr.com/300/400/love?ramdom=1">
+        <img src="http://loremflickr.com/300/400/girl?ramdom=2">
+        <img src="http://loremflickr.com/300/400/dog?ramdom=3">
+        <img src="http://loremflickr.com/300/400?ramdom=4">
+        <img src="http://loremflickr.com/300/400?ramdom=5">
+        <img src="http://loremflickr.com/300/400?ramdom=6">
+        <img src="http://loremflickr.com/300/400?ramdom=7">
+        <img src="http://loremflickr.com/300/400?ramdom=8">
+        <img src="http://loremflickr.com/300/400?ramdom=9">
+        <img src="http://loremflickr.com/300/400?ramdom=10">
+    </div>
+    
+</body>
+</html>
