@@ -37,6 +37,149 @@
         <img src="http://loremflickr.com/300/400?ramdom=9">
         <img src="http://loremflickr.com/300/400?ramdom=10">
     </div>
+
+    <style>
+
+        #card_wrap{
+            display:flex;
+            flex-wrap:wrap;
+            width:400px;
+            box-sizing: border-box;
+        }
+        .card{
+            width:33.33%;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+        }
+        .card .card_img{
+            width:100%;
+
+        }
+        .card .card_img img{
+            width:100%; 
+        }
+        
+    </style>
+
+
+    <div id="card_wrap">
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?ramdom=1" alt=""> 
+            </div>
+            <p class="crad_text">가가가가가가가가가가가가</p>
+            </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?ramdom=2" alt="">
+            </div>
+            <p class="card_text">나나나나나나나나나나나나</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?ramdom=3" alt="">
+            </div>
+            <p class="card_text">다다다다다다다다다다다다</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?ramdom=4" alt="">
+            </div>
+            <p class="card_text">라라라라라라라라라라라라</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?ramdom=5" alt="">
+            </div>
+            <p class="card_text">마마마마마마마마마마마마</p>
+        </div>
+        <div class="card">
+            <div class="card_img">
+                <img src="https://loremflickr.com/100/130?ramdom=6" alt="">
+            </div>
+            <p class="card_text">사사사사사사사사사사사사</p>
+        </div>
+    </div>
+    <style>
+        #box{
+            display:flex;
+            width:1000px;
+            padding:30px 20px;
+            box-sizing:border-box;
+            flex-wrap: wrap;
+            background-color: aliceblue;
+        }
+        .list{
+            width:50%;
+            display: flex;
+            align-items:center;
+        }
+        .mark{
+            padding:10px;
+        }
+        .title{ font-weight: 800;}
+        .detail{ color:#999;}
+    </style>
     
+    <h2>flex2 실습</h2>
+    <div id="box">
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">똑똑한 인사정보 관리</div>
+                <div class="detail">한 곳에서 관리하는 인사 및 개인정보</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">회사 문서 관리</div>
+                <div class="detail">회사의 다양한 문서 및 증명서 보관</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">구성원 근무 휴가 관리</div>
+                <div class="detail">우리회사 문화에 알맞는 근무와 휴가 관리</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">할 일 요청 및 공지사항 작성</div>
+                <div class="detail">한눈에 들어오는 할 일과 회사 소식</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">워크플로우(전자결제)</div>
+                <div class="detail">회사의 모든 의사결정과 커뮤니케이션</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title">외부 서비스 연동</div>
+                <div class="detail">구글 혹은 슬랙과 제품내 주요 기능 연동을 통한 편의성 제공</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title"></div>
+                <div class="detail"></div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="mark">●</div>
+            <div class="text">
+                <div class="title"></div>
+                <div class="detail"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

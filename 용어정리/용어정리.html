@@ -63,3 +63,14 @@ justify-content는 display:flex 안에서 콘텐츠 항목 사이와 주위에 �
 line-height:줄 높이 설정
 
 width:calc( (?px - ?px) /?)를 하면 알아서 계산해서 조절해줌
+
+^는 형제 태그로 만들라는 태그
+예(div.card>div.card_img>img^p.card_text)*4
++도 형제?
+(div.list>div.mark+div.text>div.title+div.detail)*8
+
+flex-wrap을 쓰면 요소 넓이가 부모 넓이보다 클 때 요소들을
+다음줄에 이어서 나열해주는 코드 display:flex를 부모에게 줘야함
+nowrap은 부모 넓이에 맞춰서 자식 넓이를 강제로 축소
+wrap은 부모보다 자식이 넓으면 요소를 다음줄로 바꿔줌
+wrap-reverse는 줄바꿈 하는 요소들을 역순으로 배열함
