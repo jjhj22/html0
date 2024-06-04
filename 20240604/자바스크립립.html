@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        minute = Number(prompt("주차한 시간을 입력하시오 : "))
+
+        주차시간 = 0;
+        요금 = 0;
+        추가요금 = 0;
+        
+        주차시간 = (minute <= 30) ? 1000 : 주차시간;
+        주차시간 = (minute > 30 && minute < 120) ? 1000 : 주차시간;
+        주차시간 = (minute >= 120 && minute < 240) ? 1700 : 주차시간;
+        주차시간 = (minute >= 240) ? 2700 : 주차시간;
+
+        추가요금 = (minute > 30 && minute < 120) ? minute-30 : 추가요금;
+        추가요금 = (minute >= 120 && minute <240) ? minute-120 : 추가요금;
+        추가요금 = (minute >= 240) ? minute-240 : 추가요금;
+
+        요금 = Math.floor(추가요금 / 10)*100;
+
+        주차시간 = 주차시간 + 요금
+        document.write("당신의 주차시간"+minute+"분<br>");
+        document.write("주차요금"+주차시간+"원");
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
