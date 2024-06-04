@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //자바스크립트 조건문 - 조건에 따라 코드를 실행 시키는 제어문이다
+        //조건문 - if~ else, switch 문
+        //if문은 조건식이 참이냐 거짓이냐에 따라 코드를 실행
+        //switch문은 선택문 입력한 값에 맞는 코드를 선택하여 실행
+
+        //if문 기본 구조
+        //if(조건식) {참일경우 실행할 내용}
+
+        //if(조건식){참일경우 실행할 내용}
+        //else{거짓일경우 실행할 내용}
+
+        //if(조건식){참 내용}
+        //else{  if(조건식){참 내용} else{거짓 내용} }
+        
+        //if(조건식){참 내용}
+        // else if(조건식){참내용}
+        // // else{거짓 내용}
+
+        // if(10>5) { //조건식이 참일경우에 중괄호가 실행 된다
+        //     alert("5보다 크다");
+        //     alert("두번째 코드");
+        //     alert("세번째 코드");
+        // }
+
+        // addr= "대전광역시";
+        
+        // if( addr==="대전광역시"){
+        //     document.write("구를 선택하세요");
+        //     document.write("대덕구,동구,중구,서구,유성구");
+        // }else{//조건식이 거짓일 경우에만 else 실행
+        //     document.write("올바르지 않은 지역 선택입니다");
+        //     document.write("다시 선택하세요");
+        // }
+
+        // //바이킹 키가 140이상 탑승 가능
+
+        // tall = 136;
+        // if(tall>=140){
+        //     document.write("바이킹 탑승 가능");
+        // }else{
+        //     document.write("바이킹 탑승 불가");
+        // }
+
+        // //if문을 작성할 때 참과 거짓에 실행할 코드가 하나라면 중괄호 생략가능
+        // //실행할 코드가 2개 이상이라면 반드시 중괄호로 묶어야 한다
+
+        // if(tall>=140){
+        //     result="탑승가능";
+        //     요금=1200;
+        // }else{
+        //     result="탑승불가";
+        // }
+        // document.write(result+","+요금);
+
+        
+        //두 정수를 입력받아서 두정수 중 작은수 출력
+
+        // num1=Number(prompt("첫번째 정수"));
+        // num2=Number(prompt("두번째 정수"));
+
+        // if(num1 < num2)
+        // document.write("작은수 :" + num1);
+        // else{                               //else if(num1==num2)
+        //     if(num1==num2);                 //document.write("같다")
+        //     document.write("같다");
+        // document.write("작은수 :" + num2);
+        // }
+
+        // document.write('<hr>');
+
+        // coin=Math.floor(Math.random()*2)+1;
+
+        // user=Number(prompt("1.앞면 2.뒷면 동전 앞면 뒷면 선택하세요"));
+
+        // if( coin === user){
+        //     document.write("정답 !");
+        // }else{
+        //     document.write("땡!!");
+        // }
+
+        //주사위 1개를 던진다. 주사위의 값이 4 또는 6이 나오면 10000원 받을 수 있다.
+
+        // document.write('<hr>');
+        // dice=Math.floor(Math.random()*6)+1;
+
+        // if(dice == 4 || dice==6){
+        //     document.write("10000원을 받았다.");
+        // }else{
+        //     document.write("땡!!!!");
+        // }
+        //문제.
+        //가위바위보 컴퓨터랑 대결하기
+        //가위 -1, 바위 -2, 보 -3
+        //컴퓨터는 랜덤값, 나는 직접 입력(prompt)
+        //내가 승, 패, 비김(나와 컴퓨터의 값이 같으면)
+
+        // sk=Number(prompt("가위~ 바위~ 보!!"));
+        // zja=Math.floor(Math.random()*3)+1;
+        // if(sk>zja && (sk-zja)==2){
+        //     document.write("패");
+        // }else if(sk>zja && (sk-zja)==1){
+        //     document.write("승");
+        // }else{
+        //     document.write("비김");
+        // }
+
+        function start(){
+            // alert(" 오! 클릭했군!!");
+            // document.write("클릭??");
+            document.getElementById('출력위치').innerText="<br>내가 넣고싶은 글씨";
+        }                            //function 함수라는 뜻 alert는 알림창 띄우기
+
+        
+
+    </script>
+</head>
+<body>
+    <!-- onclick="start()"는 버튼태그글 클릭하면 자바스크립트에서 start라는 이름의
+    함수를 실행해라 라는 뜻-->
+    <button onclick="start()">나를 클릭해줘</button>
+
+    <h1 id="출력위치"></h1>
+    
+</body>
+</html>

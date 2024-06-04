@@ -5,28 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        minute = Number(prompt("주차한 시간을 입력하시오 : "))
+        // minute = Number(prompt("주차한 시간을 입력하시오 : "))
 
-        주차시간 = 0;
-        요금 = 0;
-        추가요금 = 0;
+        // 주차시간 = 0;
+        // 요금 = 0;
+        // 추가요금 = 0;
         
-        주차시간 = (minute <= 30) ? 1000 : 주차시간;
-        주차시간 = (minute > 30 && minute < 120) ? 1000 : 주차시간;
-        주차시간 = (minute >= 120 && minute < 240) ? 1700 : 주차시간;
-        주차시간 = (minute >= 240) ? 2700 : 주차시간;
+        // 주차시간 = (minute <= 30) ? 1000 : 주차시간;
+        // 주차시간 = (minute > 30 && minute < 120) ? 1000 : 주차시간;
+        // 주차시간 = (minute >= 120 && minute < 240) ? 1700 : 주차시간;
+        // 주차시간 = (minute >= 240) ? 2700 : 주차시간;
 
-        추가요금 = (minute > 30 && minute < 120) ? minute-30 : 추가요금;
-        추가요금 = (minute >= 120 && minute <240) ? minute-120 : 추가요금;
-        추가요금 = (minute >= 240) ? minute-240 : 추가요금;
+        // 추가요금 = (minute > 30 && minute < 120) ? minute-30 : 추가요금;
+        // 추가요금 = (minute >= 120 && minute <240) ? minute-120 : 추가요금;
+        // 추가요금 = (minute >= 240) ? minute-240 : 추가요금;
 
-        요금 = Math.floor(추가요금 / 10)*100;
+        // 요금 = Math.floor(추가요금 / 10)*100;
 
-        주차시간 = 주차시간 + 요금
-        document.write("당신의 주차시간"+minute+"분<br>");
-        document.write("주차요금"+주차시간+"원");
+        // 주차시간 = 주차시간 + 요금
+        // document.write("당신의 주차시간"+minute+"분<br>");
+        // document.write("주차요금"+주차시간+"원");
 
+        // cost=1000;
+        // parkingtime=3;
+        // add=100;
 
+        // cpt=Number(prompt("총 주차시간 몇 분"));
+
+        // cost=(cpt >=120)?1700 :cost;
+        // par
+        // time=Math.floor(cpt/10);
+        // cost=(time<=parkingtime)? cost:cost+(time-parkingtime)*add;
+
+        // document.write('주차비: ${cost}원 <br>');
+
+        사과 = 10;
+        document.write( (사과 >=1)? "판매중":"품절");
+        document.write("<hr>");
+        document.write( (!사과)? "품절":"판매중");
         
     </script>
 </head>
