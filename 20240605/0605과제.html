@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 문제.1
+        // num1=Number(prompt("첫번째 정수"));
+        // num2=Number(prompt("두번째 정수"));
+        // num3=Number(prompt("세번째 정수"));
+
+        // if(num1>num2){
+        //     if(num1>num3){
+        //         document.write("큰수 :"+num1);
+        //     }else{
+        //         document.write("큰수 :"+num3);
+        //     }
+        //     }else if(num2>num3){
+        //         document.write("큰수 :"+num2);
+        //     }else{
+        //         document.write("큰수 :"+num3);
+        //     }
+            
+        // if(num1>num2&&num1>num3){
+        //     document.write("큰수:"+num1);
+        // }else if(num2>num1&&num2>num3){
+        //     document.write("큰수:"+num2);
+        // }else{
+        //     document.write("큰수:"+num3);
+        // }
+
+        //주사위 게임
+
+        user1= Math.floor(Math.random()*6)+1;
+        user2= Math.floor(Math.random()*6)+1;
+
+        com1= Math.floor(Math.random()*6)+1;
+        com2= Math.floor(Math.random()*6)+1;
+
+        userSum=user1+user2;
+        comSum=com1+com2;
+        // dice=`나 : ${user1}`;
+        // "나 : "+user1 +" , "+user2 편하게 쓰기위해 
+        
+        if(userSum===comSum){
+            document.write("비김");
+        }
+        else if(userSum>comSum){
+            document.write("나의승리");
+        }else{
+            document.write("나의 패배");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
