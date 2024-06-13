@@ -1,5 +1,6 @@
 //1)할일, 시간, 상태 박스에 입력한 텍스트를 데이터로 전달하기
 $(function(){
+    
     $("#enroll").click(function(){
         let workText = $("#work").val();
         let timeText = $("#time").val();
@@ -24,8 +25,8 @@ $(function(){
             return;
         }
 
-//2-1)'상태'부분은 완료 혹은 진행중만 입력할 수 있고 그 외에는 경고 안내 발생시키키        
-        if (stateText !== '완료' && stateText !== '진행중') {
+//2-1)'상태'부분은 완료 혹은 진행중만 입력할 수 있고 그 외에는 경고 안내 발생시키기        
+        if (stateText !== '완료' &&  stateText !== '진행중') {
             alert("상태는 '완료' 또는 '진행중'만 입력할 수 있습니다.");
             $("#state").focus();
             return;

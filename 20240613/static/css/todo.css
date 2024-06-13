@@ -8,6 +8,10 @@
 ul{
     list-style-type: none;
 }
+ul li{
+    display: inline-block;
+    margin-left: 150px;
+}
 input{ padding-left:10px }
 #wrap{
     width:800px;
@@ -57,4 +61,15 @@ input{ padding-left:10px }
     position: relative;
     
     top:150px;
+
+}
+.title{
+    left:300px;
+    position: relative;
+    
+}
+.todoList_box{
+    position: relative;
+    top:50px;
+    
 }
