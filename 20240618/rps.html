@@ -1,18 +1,19 @@
+<!--  rps.html  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--jquery CDN-->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- jquery CDN-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <script src="./static/javascript/rps.js"></script>
-    <link rel="stylesheet" href="./static/css/rps.css">
+<script src="./static/javascript/rps.js"></script>
+<link rel="stylesheet" href="./static/css/rps.css">
+
 </head>
 <body>
-    <!-- <div id="vs"><img src="./static/image/vs-versus-icon-logo-black-white-symbol-fight-competition-battle-sport-game-grunge-drawing-and-paint_101884-2201.avif"></div> -->
-
+    <!--  vs 이미지 있다면 여기에 주석 있는 자리에넣기-->
     <div id="buttonWrap">
         <button id="game">시작</button>
         <button id="record">전적</button>
@@ -31,7 +32,25 @@
             </div>
         </div>
     </div>
-    <div class="result"></div>
-    
+
+
+
+    <div id="modal" style="display:none;">
+        <div id="modalBackground"></div>
+        <div id="modalData">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th class="user">유저</th>
+                        <th class="com">컴퓨터</th>
+                        <th class="outcome">결과</th>
+                    </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+        </div>
+    </div>
+
+
 </body>
 </html>
