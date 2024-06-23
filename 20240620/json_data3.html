@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        /*
+            폭염.json 파일의 내용 자바스크립으로 가져와서
+            브라우저 화면에 출력하기
+            이쁘고 깔끔하고 심플하게
+        */
+
+        $(function(){
+            $("#day").on('keyup',heatFilter)
+        })
+        function heatFilter(){
+            var value=$(this).val();
+                    
+        }
+    
+        $(function(){ //window.load
+            const xml=new XMLHttpRequest();
+        xml.onload=function(){  //json파일 모두 열기 되면 실행
+            var data=this.responseText; // json파일의 내용을 가져와서 data에 저장,문자열로 저장되어 있다
+            data=JSON.parse(data); //json을 자바스크립트 객체로 변환하여 data에 저장
+            
+            output(data);
+        }
+
+        xml.open('GET', '폭염.json'); //받기
+        xml.send(); //보내기
+
+        
+        });
+
+        function output(data){
+            //data 매개변수는 배열이다. 배열안에 객체들이 있다.
+            for(var i=0; i<data.length; i++){
+                // if(data[i].동선택==="부강면"){
+                    $("#demf").append(`
+                <tr>
+                    <td>${data[i].연도별}</td>
+                    <td>${data[i]['서울(일)']}</td>
+                    <td>${data[i]['강릉(일)']}</td>
+                    <td>${data[i]['대전(일)']}</td>
+                    <td>${data[i]['대구(일)']}</td>
+                    <td>${data[i]['광주(일)']}</td>
+                    <td>${data[i]['부산(일)']}</td>
+                    <td>${data[i]['전국일평균(일)']}</td>
+                    
+                </tr>
+            `);
+                // }
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="filter">
+        <select id="location">
+            <option value="전국">전국</option>
+            <option value="서울">서울</option>
+            <option value="강릉">강릉</option>
+            <option value="대전">대전</option>
+            <option value="대구">대구</option>
+            <option value="광주">광주</option>
+            <option value="부산">부산</option>
+            
+        </select>
+        <input type="number" id="day" value="0" style="width: 40px; padding-left:10px">일
+        <button id="more">이상</button>
+        <button id="less">이하</button>
+    </div>
+    <div id="wrap">
+        <div id="wpahr">
+            <h1>폭염정보</h1>
+        </div>
+        <div id="dlist">
+            <table id="dtable">
+                <thead class="dhead">
+                    <tr>
+                        <th class="a">연도별</th>
+                        <th class="y">서울</th>
+                        <th class="y">강릉</th>
+                        <th class="y">대전</th>
+                        <th class="y">대구</th>
+                        <th class="y">광주</th>
+                        <th class="y">부산</th>
+                        <th class="b">전국일평균</th>
+                    </tr>
+                </thead>
+                <tbody id="demf"></tbody>
+            </table>
+            
+        </div>
+    </div>
+    
+    <style>
+        #wpahr{
+            margin:0 auto;
+            text-align: center;
+        }
+        #wrap{
+            width:1000px;
+            margin:100px auto;
+        }
+        #dlist{
+            padding:15px 0;
+            
+            
+        }
+        .y{
+            width:13%;
+            
+        }
+        .a{
+            width:10%
+        }
+        .b{
+            width:14%;
+        }
+        #demf{
+            line-height: 40px;
+            font-size:18px;
+            text-align:center;
+        }
+        #dtable{
+            width:100%;
+            border-collapse: collapse;
+        }
+        th, td{
+            border:1px solid #aaa;
+            padding:8px;
+        }
+
+
+    </style>
+</body>
+</html>
