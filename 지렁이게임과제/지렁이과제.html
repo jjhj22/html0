@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지렁이 게임</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #wrap table { border-collapse: collapse; }
+        #wrap table tr td {
+            width: 30px; height: 30px;
+            border: 1px solid black;
+        }
+        .wall { background: black; }
+        .snake { background: green; }
+        .blank { background-color: white; }
+        .food { background-color: red; }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <script>
+        const board = [
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        ];
+        
+        let snake = [{ x: 10, y: 6 }];
+        let direction = { x: 0, y: 0 };
+        let nextDirection = { x: 0, y: 0 };
+        let food = spawnFood();
+        let gameover=false;
+
+        function drawBoard() {
+            let out = "<table>";
+            for (let i = 0; i < board.length; i++) {
+                out += "<tr>";
+                for (let j = 0; j < board[i].length; j++) {
+                    let tdClass = "wall";
+                    if (board[i][j] === 0) tdClass = "blank";
+                    if (board[i][j] === 2) tdClass = "snake";
+                    if (i === food.y && j === food.x) tdClass = "food";
+                    out += `<td class="${tdClass}"></td>`;
+                }
+                out += "</tr>";
+            }
+            out += "</table>";
+            $("#wrap").html(out);
+        }
+
+        function spawnFood() {
+            let x, y;
+            do {
+                x = Math.floor(Math.random() * (board[0].length - 2)) + 1;
+                y = Math.floor(Math.random() * (board.length - 2)) + 1;
+            } while (board[y][x] !== 0);
+            return { x, y };
+        }
+
+        function moveSnake() {
+            direction = nextDirection;
+            const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+            if (board[head.y][head.x] === 1 || snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+                
+                clearInterval(gameInterval);
+                return;
+            }
+            snake.unshift(head);
+            if (head.x === food.x && head.y === food.y) {
+                food = spawnFood();
+            } else {
+                snake.pop();
+            }
+            drawBoard();
+        }
+
+        $(document).keyup(function(event) {
+            switch (event.keyCode) {
+                case 87: if (direction.y !== 1) nextDirection = { x: 0, y: -1 }; break; // W
+                case 65: if (direction.x !== 1) nextDirection = { x: -1, y: 0 }; break; // A
+                case 68: if (direction.x !== -1) nextDirection = { x: 1, y: 0 }; break;  // D
+            }
+        });
+
+        const gameInterval = setInterval(moveSnake, 200);
+
+        $(function() {
+            drawBoard();
+        });
+    </script>
+</body>
+</html>
