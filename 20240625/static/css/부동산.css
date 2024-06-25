@@ -1,0 +1,38 @@
+*{
+    text-align: center;
+    margin: 0 auto;
+    
+}
+#wrap{
+    width:1000px;
+    
+}
+#상단{
+    border-top: 1px solid rgb(43, 126, 236);
+    padding: 10px;
+    
+    
+}
+h1{
+    padding:30px;
+}
+#거래방식{
+    padding: 5px;
+}
+#가격대{
+    padding: 5px;
+}
+#면적{
+    padding: 5px;
+}
+#방{
+    padding: 5px;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    width:150px;
+    height:100px;
+    background-size: cover;
+}
