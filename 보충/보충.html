@@ -5,26 +5,48 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
 
-    1.꾸준히해라
-    2.반복해라
+    <!-- 1.꾸준히해라
+    2.반복해라 -->
 
 
     <script>
-        var 출력문서=22;
-        var 출력문서개수=17;
-        var 프린터기a4=68;
-        var 총출력문서=출력문서개수*출력문서;
-        var 추가a4=총출력문서-프린터기a4;
+        // var 출력문서=22;
+        // var 출력문서개수=17;
+        // var 프린터기a4=68;
+        // var 총출력문서=출력문서개수*출력문서;
+        // var 추가a4=총출력문서-프린터기a4;
 
 
 
-        document.write(추가a4);
+        // document.write(추가a4);
+
+        var 라면=3500;
+        var 떡볶이=4500;
+        var 라뽁이=5500;
+        var 오므라이스=6000;
+
+        
+
+        money=Number(prompt("얼마 있냐"));
+
+if((라면+떡볶이+라뽁이+오므라이스)<=money){ // 19500 , 13500, 8000, 3500
+    document.write("라면,떡볶이,라볶이,오므라이스");
+}else if((라면+떡볶이+라뽁이)<=money){
+    document.write("라면,떡볶이,라뽁이");
+}else if((라면+떡볶이)<=money){
+    document.write("라면,떡볶이");
+}else if(라면<=money){
+    document.write("라면");
+}else{
+    document.wirte("굶어라");
+}
     </script>
 </head>
 <body>
     
 </body>
 </html>
+
 
 
 
